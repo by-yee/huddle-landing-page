@@ -1,0 +1,139 @@
+body {
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  background-color: #674baf;
+}
+body::before {
+  content: url(../images/bg-desktop.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.container {
+  padding: 2em 4em;
+}
+
+header img {
+  width: 180px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
+  padding: 3em 0;
+}
+main img {
+  width: 100%;
+  max-width: 600px;
+}
+main .content {
+  width: 45%;
+  padding: 0 4em;
+}
+main .content h1 {
+  font-family: "Poppins", sans-serif;
+}
+main .content p {
+  line-height: 1.6em;
+}
+main .content__register {
+  padding: 0.7em 3em;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #674baf;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 2em;
+  border-style: none;
+  box-shadow: 6px 4px 15px -6px #000;
+  transition: all 0.3s ease-in-out;
+}
+main .content__register:hover {
+  color: #fff;
+  background-color: #e882e8;
+}
+
+footer {
+  padding: 1em 0;
+}
+footer .icon {
+  display: flex;
+  justify-content: end;
+  gap: 0.8em;
+}
+footer .icon .fab {
+  padding: 0.6em;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+footer .icon .fab:hover {
+  color: #e882e8;
+  border-color: #e882e8;
+}
+footer .icon i:nth-child(1) {
+  padding: 0.6em 0.8em;
+}
+footer .icon i:nth-child(3) {
+  padding: 0.6em 0.7em;
+}
+footer .attribution {
+  padding-top: 4em;
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: #fff;
+}
+
+@media (max-width: 980px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  body::before {
+    content: url(../images/bg-mobile.svg);
+    left: auto;
+  }
+
+  .container {
+    max-width: 350px;
+    padding: 2em 2em;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main img {
+    width: 60%;
+  }
+  main .content {
+    width: 100%;
+    padding-top: 1em;
+    text-align: center;
+  }
+  main .content h1 {
+    font-size: 28px;
+  }
+  main .content__register {
+    margin-top: 15px;
+    padding: 0.7em 6em;
+  }
+
+  footer .icon {
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

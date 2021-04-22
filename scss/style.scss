@@ -1,0 +1,159 @@
+@import 'variables', 'config';
+
+body {
+  min-height: 100vh;
+  font-family: $font_body;
+  font-weight: $regular_body;
+  color: $white;
+  background-color: hsl(257, 40%, 49%);
+
+  &::before {
+    content: url(../images/bg-desktop.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.container {
+  padding: 2em 4em;
+}
+
+header {
+  img {
+    width: 180px;
+  }
+}
+
+main {
+  @include flexDisplay(row, center, normal);
+  padding: 3em 0;
+
+  img {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .content {
+    width: 45%;
+    padding: 0 4em;
+
+    h1 {
+      font-family: $font_heading;
+    }
+ 
+    p {
+      line-height: 1.6em;
+    }
+
+    &__register {
+      padding: 0.7em 3em;
+      font-family: $font_heading;
+      font-size: 16px;
+      color: $violet;
+      background-color: $white;
+      cursor: pointer;
+      border-radius: 2em;
+      border-style: none;
+      box-shadow: 6px 4px 15px -6px $black;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $white;
+        background-color: $soft_magenta;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 1em 0;
+
+  .icon {
+    display: flex;
+    justify-content: end;
+    gap: 0.8em;
+
+    .fab {
+      padding: 0.6em;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $soft_magenta;
+        border-color: $soft_magenta;
+      }
+    }
+
+    i:nth-child(1) {
+      padding: 0.6em 0.8em;
+    }
+
+    i:nth-child(3) {
+      padding: 0.6em 0.7em;
+    }
+  }
+
+  .attribution { 
+    padding-top: 4em;
+    font-size: 11px; 
+    text-align: center; 
+  
+    a { 
+      color: $white; 
+    }
+  }
+}
+
+@include tablet { 
+  body {
+    @include flexDisplay(row, center, center);
+
+    &::before {
+      content: url(../images/bg-mobile.svg);
+      left: auto;
+    }
+  }
+
+  .container {
+    max-width: 350px;
+    padding: 2em 2em;
+  }
+    
+  main {
+    @include flexDisplay(column, center, center);
+
+    img {
+      width: 60%;
+    }
+
+    .content {
+      width: 100%;
+      padding-top: 1em;
+      text-align: center;
+  
+      h1 {
+        font-size: 28px;
+      }
+  
+      &__register {
+        margin-top: 15px;
+        padding: 0.7em 6em;
+      }
+    }
+  }
+
+  footer {
+    .icon {
+      justify-content: center;
+    }
+  }
+}
+
+// @include mobile { 
+//   body {
+    
+//   }
+// }
