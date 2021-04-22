@@ -1,6 +1,8 @@
 @import 'variables', 'config';
 
 body {
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
   font-family: $font_body;
   font-weight: $regular_body;
@@ -17,30 +19,31 @@ body {
 }
 
 .container {
-  padding: 2em 4em;
+  padding: 3em 4em;
 }
 
 header {
   img {
-    width: 180px;
+    width: 210px;
   }
 }
 
 main {
   @include flexDisplay(row, center, normal);
-  padding: 3em 0;
+  padding-top: 5em;
 
   img {
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
   }
 
   .content {
     width: 45%;
-    padding: 0 4em;
+    padding: 0 1em 0 3em;
 
     h1 {
       font-family: $font_heading;
+      font-size: 38px;
     }
  
     p {
@@ -48,7 +51,7 @@ main {
     }
 
     &__register {
-      padding: 0.7em 3em;
+      padding: 0.8em 3.5em;
       font-family: $font_heading;
       font-size: 16px;
       color: $violet;
@@ -68,7 +71,7 @@ main {
 }
 
 footer {
-  padding: 1em 0;
+  padding-top: 2em;
 
   .icon {
     display: flex;
@@ -121,17 +124,24 @@ footer {
     max-width: 350px;
     padding: 2em 2em;
   }
+
+  header {
+    img {
+      width: 130px;
+    }
+  }
     
   main {
     @include flexDisplay(column, center, center);
+    padding-top: 3em;
 
     img {
-      width: 60%;
+      width: 80%;
     }
 
     .content {
       width: 100%;
-      padding-top: 1em;
+      padding: 3em 0;
       text-align: center;
   
       h1 {
@@ -151,9 +161,3 @@ footer {
     }
   }
 }
-
-// @include mobile { 
-//   body {
-    
-//   }
-// }
