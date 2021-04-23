@@ -30,12 +30,15 @@ header {
 }
 
 main {
-  @include flexDisplay(row, center, normal);
+  @include flexDisplay(row, center, center);
   padding-top: 5em;
 
-  img {
-    width: 100%;
-    max-width: 700px;
+  .image {
+    width: 55%;
+
+    img {
+      width: 100%;
+    }
   }
 
   .content {
@@ -91,11 +94,11 @@ footer {
       }
     }
 
-    i:nth-child(1) {
+    a:nth-child(1) {
       padding: 0.6em 0.8em;
     }
 
-    i:nth-child(3) {
+    a:nth-child(3) {
       padding: 0.6em 0.7em;
     }
   }
@@ -114,15 +117,10 @@ footer {
 @include tablet { 
   body {
     @include flexDisplay(row, center, center);
-
-    &::before {
-      content: url(../images/bg-mobile.svg);
-      left: auto;
-    }
   }
 
   .container {
-    max-width: 350px;
+    // max-width: 350px;
     padding: 2em 2em;
   }
 
@@ -136,8 +134,14 @@ footer {
     @include flexDisplay(column, center, center);
     padding-top: 3em;
 
-    img {
-      width: 80%;
+    .image {
+      width: 100%;
+      text-align: center;
+
+      img {
+        width: 50%;
+        min-width: 280px;
+      }
     }
 
     .content {
@@ -159,6 +163,15 @@ footer {
   footer {
     .icon {
       justify-content: center;
+    }
+  }
+}
+
+@include mobile { 
+  body {
+    &::before {
+      content: url(../images/bg-mobile.svg);
+      left: auto;
     }
   }
 }
